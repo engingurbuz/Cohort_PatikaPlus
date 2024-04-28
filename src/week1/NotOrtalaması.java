@@ -2,38 +2,33 @@ package week1;
 import java.util.Scanner;
 public class NotOrtalaması {
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-            try (Scanner scanner = new Scanner(System.in)) {
-                System.out.println("Matematik notunuzu giriniz:");
-                int Mat = scanner.nextInt();
+        System.out.println("Matematik Puanı: ");
+        int matematikPuanı = scanner.nextInt();
 
-                System.out.println("Fizik notunuzu giriniz:");
-                int Fizik = scanner.nextInt();
+        System.out.println("Fizik Puanı: ");
+        int fizikPuanı = scanner.nextInt();
 
-                System.out.println("Kimya notunuzu giriniz:");
-                int Kimya = scanner.nextInt();
+        System.out.println("Kimya Puanı: ");
+        int kimyaPuanı = scanner.nextInt();
 
-                System.out.println("Türkçe notunuzu giriniz:");
-                int Türkce = scanner.nextInt();
+        System.out.println("Türkçe Puanı: ");
+        int türkçePuanı = scanner.nextInt();
 
-                System.out.println("Tarih notunuzu giriniz:");
-                int Tarih = scanner.nextInt();
+        System.out.println("Tarih Puanı: ");
+        int tarihPuanı = scanner.nextInt();
 
-                System.out.println("Müzik notunuzu giriniz:");
-                int Müzik = scanner.nextInt();
+        System.out.println("Müzik Puanı: ");
+        int müzikPuanı = scanner.nextInt();
 
-                int Toplam = (Mat + Fizik + Kimya + Türkce + Tarih + Müzik);
-                double Ortalama = Toplam / 6 ;
+        int toplamPuan = matematikPuanı + fizikPuanı + kimyaPuanı + türkçePuanı + tarihPuanı + müzikPuanı;
+        double ortalama = toplamPuan / 6.0;
 
-                System.out.println("6 dersin Ortalaması " + Ortalama);
+        System.out.println("Ortalamanız: " + ortalama);
 
-                boolean Gecti = Ortalama >= 60 ;
-
-                String Sonuc = Gecti ? "Sınıfı Geçtiniz..." : "Sınıfta Kaldınız...";
-
-                System.out.println(Sonuc);
-            }
-
-        }
+        String sonuc = (ortalama >= 60) ? "Sınıfı Geçti" : "Sınıfta Kaldı";
+        System.out.println(sonuc);
     }
+}
