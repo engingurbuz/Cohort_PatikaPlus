@@ -1,4 +1,4 @@
-package week1;
+package week1.teknik1;
 import java.util.Scanner;
 public class NotOrtalaması {
 
