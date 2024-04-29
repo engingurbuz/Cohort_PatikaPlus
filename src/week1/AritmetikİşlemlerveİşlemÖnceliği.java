@@ -5,22 +5,24 @@ import java.util.Scanner;
 public class AritmetikİşlemlerveİşlemÖnceliği {
 
     public static void main(String[] args) {
-        // Scanner nesnesi oluştur
-        Scanner scanner = new Scanner(System.in);
 
-        // Kullanıcıdan 3 sayı al
-        System.out.print("a sayısını giriniz: ");
-        int a = scanner.nextInt();
-        System.out.print("b sayısını giriniz: ");
-        int b = scanner.nextInt();
-        System.out.print("c sayısını giriniz: ");
-        int c = scanner.nextInt();
+        // Creation of variables
+        int a, b, c, total;
 
-        // İşlemleri hesapla
-        int sonuc = a + (b * c) - b;
+        // Define a scanner
+        Scanner input= new Scanner(System.in);
 
-        // Sonucu ekrana yazdır
-        System.out.println("Sonuç: " + sonuc);
+        // Get values from the user
+        System.out.print("Enter the value of a: ");
+        a= input.nextInt();
+        System.out.print("Enter the value of b: ");
+        b= input.nextInt();
+        System.out.print("Enter the value of c: ");
+        c= input.nextInt();
+
+        // Calculation of values
+        total= a+b*c-b;
+        System.out.print("Result: " +total);
+
     }
 }
-
