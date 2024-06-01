@@ -1,4 +1,4 @@
-package week2.teknik_icerik_3;
+package week2.teknik_icerik_4;
 
 import java.util.Scanner;
 
