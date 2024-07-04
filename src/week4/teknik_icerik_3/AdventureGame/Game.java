@@ -12,6 +12,7 @@ public class Game {
         Player player = new Player("Engin");
         System.out.println(player.getName() + " Hoşgeldiniz!");
         System.out.println("Lütfen bir karakter seçiniz: ");
+        System.out.println("------------------------------------------------------------------------------------------------------");
         player.selectChar();
 
         Location location = null;
@@ -21,8 +22,10 @@ public class Game {
             System.out.println("**************** Bölgeler ****************");
             System.out.println();
             System.out.println("1 - Güvenli Ev --> Burası sizin için güvenli ev, düşman yoktur.");
-            System.out.println("2 - Mağaza --> Silah veya zırh satın alabilirsiniz.");
-            System.out.println("3 - Mağara --> Mağara gir. Dikkatli ol, canavar çıkabilir.");
+            System.out.println("2 - Eşya Dükkanı --> Silah veya zırh satın alabilirsiniz.");
+            System.out.println("3 - Mağara --> Ödül <Yemek> , Dikkatli ol, zombi çıkabilir.");
+            System.out.println("4 - Orman --> Ödül <Odun> , Dikkatli ol, vampir çıkabilir.");
+            System.out.println("5 - Nehir --> Ödül <Su> , Dikkatli ol, ayı çıkabilir.");
             System.out.println("0 - Çıkış Yap --> Oyunu sonlandır.");
             System.out.println("Lütfen gitmek istediğiniz bölgeyi seçiniz.");
             int selectLoc = input.nextInt();
@@ -39,8 +42,14 @@ public class Game {
                 case 3:
                     location = new Cave(player);
                     break;
+                case 4:
+                    location = new Forest(player);
+                    break;
+                case 5:
+                    location = new River(player);
+                    break;
                 default:
-                    location = new SafeHouse(player);
+                    System.out.println("Lütfen geçerli bir bölge giriniz.");
             }
             if(location == null){
                 System.out.println("Oyun bitti, yine bekleriz :(");
