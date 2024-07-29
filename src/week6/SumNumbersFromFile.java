@@ -6,7 +6,8 @@ import java.io.IOException;
 
 public class SumNumbersFromFile {
     public static void main(String[] args) {
-        String fileName = "numbers.txt"; // Change this to your file's path
+        // Update the file path to the full path of your numbers.txt file
+        String fileName = "C:\\Users\\Engin\\IdeaProjects\\Cohort_PatikaPlus\\src\\week6\\numbers.txt"; // Replace with your file path
         int sum = 0;
 
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
